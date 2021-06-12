@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{62523EE8-BE4D-4545-9FCA-D0C8C87EA7A0}") = "window_resize_fix", "window_resize_fix\window_resize_fix.vcxproj", "{95CA2036-60BE-4C64-940D-4A36BC6DE15B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95CA2036-60BE-4C64-940D-4A36BC6DE15B}.Debug|x64.ActiveCfg = Debug|x64
+		{95CA2036-60BE-4C64-940D-4A36BC6DE15B}.Debug|x64.Build.0 = Debug|x64
+		{95CA2036-60BE-4C64-940D-4A36BC6DE15B}.Debug|x86.ActiveCfg = Debug|Win32
+		{95CA2036-60BE-4C64-940D-4A36BC6DE15B}.Debug|x86.Build.0 = Debug|Win32
+		{95CA2036-60BE-4C64-940D-4A36BC6DE15B}.Release|x64.ActiveCfg = Release|x64
+		{95CA2036-60BE-4C64-940D-4A36BC6DE15B}.Release|x64.Build.0 = Release|x64
+		{95CA2036-60BE-4C64-940D-4A36BC6DE15B}.Release|x86.ActiveCfg = Release|Win32
+		{95CA2036-60BE-4C64-940D-4A36BC6DE15B}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78AF792D-F27E-48AB-A5BF-537FBEA7C1F4}
+	EndGlobalSection
+EndGlobal
