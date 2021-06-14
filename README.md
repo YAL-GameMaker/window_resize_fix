@@ -1,5 +1,7 @@
 # window_resize_fix
 
+**Links:** [itch.io page]() · [documentation](https://yal.cc/docs/gm/window_resize_fix/)
+
 Makes window resizing behaviour in GameMaker Studio 1.4 (1.4.1804 and 1.4.9999) and GameMaker Studio 2.3+ less cursed.
 
 ![](export/resize.gif)
