@@ -3,5 +3,52 @@
 ```set autoapi ext```
 ```set intro
 This is a "cheat sheet" for "window_resize_fix" extension by YellowAfterlife.
-The extension can be found on [itch.io](https://yellowafterlife.itch.io/gamemaker-window_resize_fix).
+The extension can be found on [itch.io](https://yellowafterlife.itch.io/gamemaker-window-resize-fix).
 ```
+#[Functions](funcs) {
+    #[window_resize_fix_init()->bool]() {
+        Should be called on game start to initialize the extension.
+        
+        Returns whether succeeded (fails if the DLL is missing).
+    }
+    #[window_resize_fix_get_enabled()->bool]() {
+        Returns whether the fix is currently enabled
+        (is enabled by default by [window_resize_fix_init]).
+    }
+    #[window_resize_fix_set_enabled(enable)]() {
+        Enables/disables the extension.
+        
+        There is no particular reason to call this outside of comparing the behaviour.
+    }
+    #[window_resize_fix_set_mode(draw_mode)]() {
+        Changes what will be drawn in the game window while it is being resized.
+        
+        Supported values are: --{
+        --  `window_resize_fix_mode_copy`:\
+            Displays a copy of the last game frame in top-left corner.\
+            This can be preferable for software.
+        --  `window_resize_fix_mode_stretch_aspect`:\
+            Stretches a copy of the last frame while adjusting it for the game's
+            aspect ratio. This is the default; set your aspect ratio using
+            [window_resize_fix_set_aspect_ratio].
+        --  `window_resize_fix_mode_stretch_full`:\
+            Stretches a copy of the last frame to cover the entire window.\
+            This can be preferable for 3d games.
+        }
+    }
+    #[window_resize_fix_set_aspect_ratio(width, height)]() {
+        Sets game dimensions for use with `window_resize_fix_mode_stretch_aspect`.
+        
+        This is cheap enough to be called every frame.
+    }
+}
+#[Purpose-specific functions](funcs-misc) {
+    Which you shouldn't have to call.
+    #[window_resize_fix_get_just_resized()->bool]() {
+        Returns whether the window was resized since the last time you called this function.
+    }
+    #[window_resize_fix_reset()]() {
+        Forcefully invokes the subroutine that runs after a resize,
+        updating the internal buffer size and likely consuming your surfaces in process.
+    }
+}
